@@ -32,7 +32,8 @@ print(Tk)
 
 # Violin plots
 ggplot(datum, aes(Feature, Mean)) +
-  geom_violin() + geom_jitter(aes(color = Sample), position=position_jitter(.2), size=5, alpha = 0.6) +
+  geom_violin() + geom_jitter(aes(color = Sample), position=position_jitter(.2), size=3, alpha = 0.6) +
+  geom_boxplot(width=0.1, color="black", alpha=0.2, outlier.shape = NA) +
   labs(x="Feature", y="Mean Fluorescence") +
   theme_bw() +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
